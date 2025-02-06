@@ -109,7 +109,7 @@ function install() {
 
     #Create aliases for this session
     SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
-    alias assignment="./$SCRIPT_NAME"
+    alias stackvault="./$SCRIPT_NAME"
     alias apush="./$SCRIPT_NAME push"
     alias appush="./$SCRIPT_NAME push -p"
     alias apop="./$SCRIPT_NAME pop"
@@ -334,7 +334,7 @@ function uninstall() {
 
     source "$CONFIG_FILE" || { handle_error "Could not read configuration file"; return 1; }
 
-    unalias assignment 2>/dev/null
+    unalias stackvault 2>/dev/null
     unalias apush 2>/dev/null
     unalias appush 2>/dev/null
     unalias apop 2>/dev/null
