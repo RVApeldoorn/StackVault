@@ -47,7 +47,7 @@ To push an item (directory or file) into the vault:
 
 To push an item using the alias:
 ```sh
-apush item
+vpush item
 ```
 
 To push an item into the vault with a password:
@@ -57,7 +57,7 @@ To push an item into the vault with a password:
 
 To push an item with the alias and a password:
 ```sh
-appush item
+vppush item
 ```
 
 ### Popping an Item from the Vault
@@ -68,7 +68,7 @@ To retrieve an item from the vault:
 
 To retrieve an item using the alias:
 ```sh
-apop
+vpop
 ```
 
 To retrieve an item with password protection:
@@ -78,5 +78,5 @@ To retrieve an item with password protection:
 
 To retrieve an item with the alias and password protection:
 ```sh
-appop
+vppop
 ```

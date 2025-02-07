@@ -110,10 +110,10 @@ function install() {
     #Create aliases for this session
     SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
     alias stackvault="./$SCRIPT_NAME"
-    alias apush="./$SCRIPT_NAME push"
-    alias appush="./$SCRIPT_NAME push -p"
-    alias apop="./$SCRIPT_NAME pop"
-    alias appop="./$SCRIPT_NAME pop -p"
+    alias vpush="./$SCRIPT_NAME push"
+    alias vppush="./$SCRIPT_NAME push -p"
+    alias vpop="./$SCRIPT_NAME pop"
+    alias vppop="./$SCRIPT_NAME pop -p"
 
     echo "Installation complete. Vault directory: $VAULT_DIR"
     return 0
@@ -335,10 +335,10 @@ function uninstall() {
     source "$CONFIG_FILE" || { handle_error "Could not read configuration file"; return 1; }
 
     unalias stackvault 2>/dev/null
-    unalias apush 2>/dev/null
-    unalias appush 2>/dev/null
-    unalias apop 2>/dev/null
-    unalias appop 2>/dev/null
+    unalias vpush 2>/dev/null
+    unalias vppush 2>/dev/null
+    unalias vpop 2>/dev/null
+    unalias vppop 2>/dev/null
 
     rm -rf "$VAULT_DIR" || { handle_error "Failed to remove vault directory"; return 1; }
 
